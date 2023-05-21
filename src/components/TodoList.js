@@ -38,11 +38,13 @@ const TodoList = () => {
   const toggle = () => {
     setModal(!modal);
   };
+
   const saveTask = (taskObj) => {
     let tempList = [...taskList, taskObj];
     setTasKList(tempList);
     localStorage.setItem("taskList", JSON.stringify(tempList));
     setModal(false);
+    
   };
   return (
     <React.Fragment>
